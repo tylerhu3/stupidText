@@ -7,11 +7,16 @@ import Typography from '@mui/material/Typography';
 
 function App() {
   const [text, setText] = React.useState('');
+  const [outputText, setOutputText] = React.useState('');
   const maxRows = 99;
+  const minRows = 5;
   const marginBottom = 10;
 
   const handleChange = (event) => {
-    setText(event.target.value);
+    const inputText = event.target.value;
+    setText(inputText);
+    const convertedText = alternateCase(inputText);
+    setOutputText(convertedText);
   };
 
   const alternateCase = (str) => {
@@ -32,7 +37,6 @@ function App() {
   };
 
   const handleCopyClick = () => {
-    const outputText = alternateCase(text);
     navigator.clipboard.writeText(outputText).then(
       () => {
         console.log('Text copied to clipboard');
@@ -75,16 +79,19 @@ function App() {
           label="Input"
           multiline
           maxRows={maxRows}
+          minRows={minRows}
           value={text}
           onChange={handleChange}
           fullWidth
           sx={{ mb: marginBottom }}
         />
         <TextField
-          id="outlined-multiline-flexible"
+          id="outlined-multiline-output"
           label="Output Stupid Text"
-          value={alternateCase(text)}
-
+          multiline
+          maxRows={maxRows}
+          minRows={minRows}
+          value={outputText}
           fullWidth
           sx={{ mb: marginBottom }}
         />
