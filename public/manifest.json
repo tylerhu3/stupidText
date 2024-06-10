@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Stupid Text Converter",
+  "name": "Create Reacts App Sample",
   "icons": [
     {
       "src": "favicon.ico",
