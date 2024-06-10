@@ -72,7 +72,7 @@ function App() {
         </Typography>
         <TextField
           id="outlined-multiline-flexible"
-          label="Multiline"
+          label="Input"
           multiline
           maxRows={maxRows}
           value={text}
@@ -81,12 +81,10 @@ function App() {
           sx={{ mb: marginBottom }}
         />
         <TextField
-          id="outlined-read-only-input"
-          label="Read Only"
+          id="outlined-multiline-flexible"
+          label="Output Stupid Text"
           value={alternateCase(text)}
-          InputProps={{
-            readOnly: true,
-          }}
+
           fullWidth
           sx={{ mb: marginBottom }}
         />
