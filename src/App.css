@@ -9,6 +9,19 @@
   pointer-events: none;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+small {
+  font-size: 12px;
+  color: #888;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

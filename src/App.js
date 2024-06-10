@@ -99,6 +99,9 @@ function App() {
           Copy Text
         </Button>
       </Box>
+      <footer>
+        <small>Inspired by Danny Gancayco</small>
+      </footer>
     </div>
   );
 }
